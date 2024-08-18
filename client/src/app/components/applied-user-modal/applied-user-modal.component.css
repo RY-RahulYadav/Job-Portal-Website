@@ -1,0 +1,114 @@
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+ 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+   border-radius:0.5rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.view-btn, .reject-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.view-btn {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .serial-no {
+        display: none;
+    }
+
+    .modal-content {
+        width: calc(100% - 60px);
+        height: calc(100% - 70px);
+        margin: 10px;
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    .view-btn, .reject-btn {
+        width: 100%;
+        margin: 5%;
+        display: block;
+        box-sizing: border-box;
+      border-radius:5px;
+    }
+
+    .modal-body {
+        max-height: none;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+    }
+}

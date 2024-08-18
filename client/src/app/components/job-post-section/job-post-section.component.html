@@ -1,0 +1,83 @@
+
+
+
+
+
+<div class="container">
+    <div class="flex justify-between   items-center"  style="margin-top:1rem;">
+    <h2 class="text-2xl " style="font-weight: bold;">Post New Jobs </h2>
+    <a class="text-sm text-blue-500"> Back to Home</a>
+</div>
+    <hr class="mt-5 mb-6">
+    <form class="job-form" [formGroup]="jobpostForm">
+        <div class="left-column">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" formControlName="jobTitle">
+
+            <label for="job-title">Company Name:</label>
+            <input type="text" id="job-title" formControlName="jobcompany">
+
+            
+
+            <label for="description">Description:</label>
+            <textarea id="description" formControlName="desc"></textarea>
+
+            <label for="essential-knowledge">Essential Knowledge, Skills, and Experience (in points):</label>
+            <textarea id="essential-knowledge" formControlName="requiredSkill" ></textarea>
+
+            <label for="preferred-experience">Key Responsibilities (in points):</label>
+            <textarea id="preferred-experience"  formControlName="benefits"></textarea>
+        </div>
+        <div class="right-column">
+           
+            <label for="experience">Experience:</label>
+            <select id="experience" formControlName="jobcategory" >
+                <option value="" selected disabled>Job Category</option>
+                <option *ngFor="let item of categorydata" [value]="item.category">{{item.category}}</option>
+                
+            </select>
+
+            <label for="job-role">Job Role:</label>
+            <input type="text" id="job-role"  formControlName="jobrole" placeholder="Job Role">
+            <label for="job-role">Skills :</label>
+            <input type="text" id="job-role"  formControlName="skills" placeholder="Required Skills">
+
+            <label for="experience">Experience:</label>
+            <select id="experience" formControlName="experience">
+                <option value="" selected disabled>experience </option>
+                <option value="fresher">Fresher</option>
+                <option value="experienced">Intermediate</option>
+                <option value="experienced">Expert</option>
+            </select>
+            <label for="workmethod">Remote/Full time:</label>
+            <select id="workmethod" formControlName="workmethod">
+                <option value="" selected disabled>Remote/Full time  </option>
+                <option value="remote">Remote</option>
+                <option value="full time">Full Time</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" formControlName="salary" placeholder="Salary" >
+
+            <label for="job-post-date">Job Post Date:</label>
+            <input type="date" id="job-post-date" formControlName="jobpostdate" >
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" formControlName="deadline">
+
+            <label for="location">Location:</label>
+            <select id="location" formControlName="joblocation">
+                <option value="" selected disabled>Job Location</option>
+                <option *ngFor="let item of techcities" [value]="item">{{item}}</option>
+               
+            </select>
+
+            
+
+            <label for="company-logo">Company Logo:</label>
+            <input type="file" id="company-logo" formControlName="uploadlogo">
+        </div>
+        <button type="submit" (click)="handleSubmit()">Submit</button>
+    </form>
+</div>

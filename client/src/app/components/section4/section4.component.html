@@ -1,0 +1,34 @@
+<section class="">
+  <div class="">
+
+    <div class="flex flex-col items-center mb-10">
+      <h1 class="font-bold text-4xl mb-3 ">Hear from Our Successful Job Seekers and Employers</h1>
+      <p class="text-center">Find the job that’s perfect for you. about 800+ new jobs everyday</p>
+    </div>
+
+    <div class="cards-container ">
+      @for (item of [1,2,3, 4]; track $index) {
+      <div class="swiper-slide hover-up swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="3 / 5"
+        style="width: 309px; margin-right: 30px;">
+        <div class="card-review-1  bg-white" >
+          <div class="image-review" style="margin-left: 5rem;"> <img 
+              src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="jobBox"></div>
+          <div class="review-info bg-white" >
+            <div class="review-name">
+              <h5>Sayen Ahmod</h5><span class="font-xs">Developer</span>
+            </div>
+            <div class="review-rating flex"> <img class="w-[2rem] h-[2rem] " style="margin-right: 1rem;"
+                src="https://clipart-library.com/img/2184494.png" alt="jobBox"> <img class="w-[2rem] h-[2rem]" style="margin-right: 1rem;"
+                src="https://clipart-library.com/img/2184494.png" alt="jobBox"> <img class="w-[2rem] h-[2rem]" style="margin-right: 1rem;"
+                src="https://clipart-library.com/img/2184494.png" alt="jobBox"> <img class="w-[2rem] h-[2rem]" style="margin-right: 1rem;"
+                src="https://clipart-library.com/img/2184494.png" alt="jobBox"> <img class="w-[2rem] h-[2rem]" style="margin-right: 1rem;"
+                src="https://clipart-library.com/img/2184494.png" alt="jobBox"></div>
+            <div class="review-comment">JobCircle helped me find my dream job quickly and easily. The platform's user-friendly interface and detailed job listings made the search process seamless."</div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+</section>

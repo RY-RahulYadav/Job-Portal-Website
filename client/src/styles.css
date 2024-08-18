@@ -1,0 +1,45 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('https://fonts.bunny.net/plus-jakarta-sans/files/plus-jakarta-sans-latin-500-normal.woff2') format('woff2');
+    font-display: swap;
+  }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+body{
+    overflow-x: hidden;
+    
+}
+html{
+    width: 100vw;
+    overflow-x: hidden;
+    
+    
+}
+
+
+.myhiddenabove{
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width:767.5px) {
+    .myhiddenbelow {
+        display:none;
+        visibility: hidden;
+    }
+    .myhiddenabove{
+        display: block;
+        visibility:visible;
+    }
+}

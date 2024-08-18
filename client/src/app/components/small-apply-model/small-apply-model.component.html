@@ -1,0 +1,26 @@
+<div class="smallapplycontainer">
+<div class="profile-container">
+    <h1>Job Application Confirmation</h1>
+    <div class="profile-item">
+        <span>Name:</span> <span>{{user?.name}}</span>
+    </div>
+    <div class="profile-item">
+        <span>Email:</span> <span>{{user?.email}}</span>
+    </div>
+    <div class="profile-item">
+        <span>GitHub:</span> <a href="https://github.com/johndoe" target="_blank">{{user?.github}}</a>
+    </div>
+    <div class="resume-box" >
+       <a (click)="viewResume(user?.resume)" >Click to view resume</a> 
+    </div>
+    <div class="confirmation-container">
+        <input type="checkbox" id="info-correct" [(ngModel)]="checked">
+        <label for="info-correct">All information is correct</label>
+    </div>
+    <hr>
+    <div class="button-container">
+        <button class="button apply-btn" (click)="handleApply()" >Apply</button>
+        <button class="button decline-btn" (click)="handleclose()">Decline</button>
+    </div>
+</div>
+</div>

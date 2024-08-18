@@ -1,0 +1,621 @@
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.6666666667%;
+}
+
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+@media (min-width:576px) {
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+    }
+
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 41.6666666667%;
+    }
+
+    .col-lg-7 {
+        flex: 0 0 auto;
+        width: 58.3333333333%;
+    }
+}
+
+@media (min-width:1200px) {
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+        transition: none;
+    }
+}
+
+.btn:hover {
+    color: #212529;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: .65;
+}
+
+.fade {
+    transition: opacity .15s linear;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .fade {
+        transition: none;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/*! end @import */
+/*! @import https://jobbox-html.netlify.app/frontend/assets/css/plugins/animate.min.css */
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+/*! end @import */
+div,
+span,
+h2,
+h6,
+p,
+a,
+img,
+ul,
+li,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+section {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a {
+    color: #05264E;
+}
+
+a:hover {
+    color: #3C65F5;
+}
+
+a *:hover {
+    color: #3C65F5;
+}
+
+p {
+    color: #4F5E64;
+}
+
+::selection {
+    background: #05264E;
+    color: #fff;
+}
+
+::placeholder {
+    color: #A0ABB8;
+    opacity: 1;
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.hover-up {
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up:hover {
+    transform: translateY(-3px);
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1350px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+*:hover {
+    transition-duration: 0.2s;
+}
+
+.section-box {
+    display: inline-block;
+    width: 100%;
+    overflow: visible;
+}
+
+h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #05264E;
+}
+
+h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #05264E;
+}
+
+.font-lg,
+.font-sm {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.font-lg {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.font-sm {
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.color-text-paragraph {
+    color: #4F5E64;
+}
+
+.color-text-paragraph-2 {
+    color: #66789C;
+}
+
+a,
+img,
+span {
+    transition: all 0.3s ease 0s;
+}
+
+h2,
+h6 {
+    color: #05264E;
+}
+
+.btn {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-radius: 8px;
+    padding: 13px 25px;
+    font-size: 14px;
+    line-height: 1;
+    transition: 0.2s;
+}
+
+.btn-grey-small {
+    background-color: #EFF3FC;
+    font-size: 12px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #4F5E64 !important;
+}
+
+.btn-grey-small:hover {
+    color: #3C65F5 !important;
+}
+
+.btn-apply-now {
+    background-color: #E0E6F7;
+    color: #3C65F5;
+    padding: 12px 10px;
+    min-width: 95px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.card-time {
+    font-size: 12px;
+    color: #A0ABB8;
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+    background: url(https://jobbox-html.netlify.app/frontend/assets/imgs/template/icons/time.svg) no-repeat 0px 5px;
+}
+
+.card-briefcase {
+    font-size: 12px;
+    color: #A0ABB8;
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+    background: url(https://jobbox-html.netlify.app/frontend/assets/imgs/template/icons/briefcase.svg) no-repeat 0px 6px;
+}
+
+.card-grid-2 {
+    border-radius: 8px;
+    border: 1px solid #E0E6F7;
+    overflow: hidden;
+    margin-bottom: 24px;
+    position: relative;
+    background: #F8FAFF;
+}
+
+.card-grid-2 .btn-apply-now {
+    color: #3C65F5;
+}
+
+.card-grid-2:hover {
+    border-color: #B4C0E0;
+    background-color: #ffffff;
+}
+
+.card-grid-2:hover .btn-apply-now {
+    color: #ffffff;
+    background-color: #3C65F5;
+}
+
+.card-grid-2 a {
+    text-decoration: none;
+    color: #05264E;
+}
+
+.card-grid-2 a:hover {
+    color: #3C65F5;
+}
+
+.card-grid-2 .card-block-info {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px 20px 10px;
+}
+
+.card-grid-2 .card-block-info .card-text-price {
+    color: #3C65F5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card-grid-2 .card-block-info .card-2-bottom {
+    position: relative;
+}
+
+.card-grid-2 .flash {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 25px;
+    width: 25px;
+    background: url(https://jobbox-html.netlify.app/frontend/assets/imgs/template/icons/flash.svg) no-repeat 0px 0px;
+}
+
+.card-grid-2 .card-grid-2-image-left {
+    padding: 30px 20px 15px 20px;
+    display: flex;
+    position: relative;
+}
+
+.card-grid-2 .card-grid-2-image-left .image-box {
+    min-width: 52px;
+    padding-right: 15px;
+}
+
+.card-grid-2 .card-grid-2-image-left .right-info .name-job {
+    font-size: 18px;
+    line-height: 26px;
+    color: #05264E;
+    font-weight: bold;
+    display: block;
+}
+
+.card-grid-2 .card-grid-2-image-left .right-info .name-job:hover {
+    color: #3C65F5;
+}
+
+.card-grid-2 .card-grid-2-image-left .right-info .location-small {
+    background: url(https://jobbox-html.netlify.app/frontend/assets/imgs/template/icons/location.svg) no-repeat 0px 5px;
+    display: inline-block;
+    padding: 0px 0px 0px 20px;
+    font-size: 12px;
+    color: #A0ABB8;
+}
+
+ul li:last-child {
+    padding-bottom: 0px !important;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mr-5 {
+    margin-right: 5px !important;
+}
+
+.nav-tabs {
+    border: 0px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-tabs li {
+    display: inline-block;
+}
+
+.nav-tabs li a {
+    display: inline-block;
+    margin: 0px 5px;
+    box-shadow: 0px 2px 4px -5px rgb(10, 42, 105);
+    align-items: center;
+    padding: 13px 17px;
+    width: auto;
+    background: #ffffff;
+    border: 1px solid #E0E6F7;
+    border-radius: 8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.nav-tabs li a:hover,
+.nav-tabs li a.active {
+    color: #3C65F5;
+    border-color: #3C65F5;
+    box-shadow: 0px 2px 4px -5px rgb(10, 42, 105);
+}
+
+.nav-tabs li a img {
+    vertical-align: sub;
+    width: auto;
+    height: 18px;
+    margin: 0px 6px 0px 0px;
+}
+
+@media (max-width: 767.98px) {
+    h2 {
+        font-size: 25px;
+        line-height: 34px;
+    }
+}
+
+@media (max-width: 484.98px) {
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+/*! CSS Used keyframes */
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}

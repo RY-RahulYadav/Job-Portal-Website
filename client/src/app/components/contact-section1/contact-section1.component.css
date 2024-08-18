@@ -1,0 +1,127 @@
+/*! CSS Used from: https://jobbox-html.netlify.app/frontend/assets/css/style.css?version=4.1 */
+/*! @import https://jobbox-html.netlify.app/frontend/assets/css/vendors/normalize.css */
+img{border-style:none;}
+button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;}
+[type="checkbox"]{box-sizing:border-box;padding:0;}
+/*! end @import */
+/*! @import https://jobbox-html.netlify.app/frontend/assets/css/vendors/bootstrap.min.css */
+*,::after,::before{box-sizing:border-box;}
+h2{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;}
+h2{font-size:calc(1.325rem + .9vw);}
+@media (min-width:1200px){
+h2{font-size:2rem;}
+}
+p{margin-top:0;margin-bottom:1rem;}
+img{vertical-align:middle;}
+label{display:inline-block;}
+button{border-radius:0;}
+button:focus:not(:focus-visible){outline:0;}
+button,input,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button{text-transform:none;}
+[type=submit],button{-webkit-appearance:button;}
+[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer;}
+textarea{resize:vertical;}
+.container{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto;}
+@media (min-width:576px){
+.container{max-width:540px;}
+}
+@media (min-width:768px){
+.container{max-width:720px;}
+}
+@media (min-width:992px){
+.container{max-width:960px;}
+}
+@media (min-width:1200px){
+.container{max-width:1140px;}
+}
+@media (min-width:1400px){
+.container{max-width:1320px;}
+}
+.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x)/ -2);margin-left:calc(var(--bs-gutter-x)/ -2);}
+.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)/ 2);padding-left:calc(var(--bs-gutter-x)/ 2);margin-top:var(--bs-gutter-y);}
+@media (min-width:768px){
+.col-md-6{flex:0 0 auto;width:50%;}
+.col-md-12{flex:0 0 auto;width:100%;}
+}
+@media (min-width:992px){
+.col-lg-4{flex:0 0 auto;width:33.3333333333%;}
+.col-lg-6{flex:0 0 auto;width:50%;}
+.col-lg-8{flex:0 0 auto;width:66.6666666667%;}
+.col-lg-12{flex:0 0 auto;width:100%;}
+}
+.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+@media (prefers-reduced-motion:reduce){
+.btn{transition:none;}
+}
+.btn:hover{color:#212529;}
+.btn:focus{outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25);}
+.btn:disabled{pointer-events:none;opacity:.65;}
+.float-start{float:left!important;}
+.d-inline-block{display:inline-block!important;}
+.d-none{display:none!important;}
+.mt-5{margin-top:3rem!important;}
+.text-center{text-align:center!important;}
+@media (min-width:992px){
+.d-lg-block{display:block!important;}
+}
+/*! end @import */
+/*! @import https://jobbox-html.netlify.app/frontend/assets/css/plugins/animate.min.css */
+.animate__fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp;}
+/*! end @import */
+div,span,h2,p,img,form,label,section{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+section{display:block;}
+img{max-width:100%;}
+input,button,textarea{font-family:"Plus Jakarta Sans", sans-serif;font-size:14px;}
+*:focus,button:focus,textarea:focus,input[type=text]:focus,input[type=email]:focus{outline:none!important;box-shadow:none!important;}
+p{color:#4F5E64;}
+::selection{background:#05264E;color:#fff;}
+::placeholder{color:#A0ABB8;opacity:1;}
+*:focus,button:focus,textarea:focus,input[type=text]:focus,input[type=email]:focus{outline:none!important;box-shadow:none;}
+@media (min-width: 1400px){
+.container{max-width:1350px;}
+}
+*:hover{transition-duration:0.2s;}
+.section-box{display:inline-block;width:100%;overflow:visible;}
+h2{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:700;font-size:36px;line-height:45px;color:#05264E;}
+.font-md,.font-sm{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:400;}
+.font-md{font-size:16px!important;line-height:24px!important;}
+.font-sm{font-weight:500;font-size:14px!important;line-height:22px!important;}
+.color-text-paragraph-2{color:#66789C;}
+.color-brand-2{color:#3C65F5;}
+button,img,input,span{transition:all 0.3s ease 0s;}
+h2{color:#05264E;}
+.btn{font-family:"Plus Jakarta Sans", sans-serif;border-radius:8px;padding:13px 25px;font-size:14px;line-height:1;transition:0.2s;}
+.btn-send-message{font-weight:700;font-size:16px;line-height:24px;color:#ffffff;padding:15px 28px 15px 60px;background:#3C65F5 url(https://jobbox-html.netlify.app/frontend/assets/imgs/page/company/icon-email.svg) no-repeat 25px 15px;border-radius:4px;}
+.btn-send-message:hover{background-color:#05264E;color:#ffffff;}
+input[type=text],input[type=email],input[type=tel]{border:1px solid #E0E6F7;border-radius:4px;height:50px;box-shadow:none;padding-left:20px;font-size:14px;width:100%;}
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus{border:1px solid #EFF2FB;}
+textarea{border:1px solid #E0E6F6;border-radius:10px;height:50px;box-shadow:none;padding:10px 10px 10px 20px;font-size:16px;width:100%;min-height:250px;}
+textarea:focus{background:transparent;border:1px solid #B4C0E0;}
+label{margin-bottom:5px;}
+.mt-6{margin-top:6px!important;}
+.mt-5{margin-top:5px!important;}
+.mt-20{margin-top:20px!important;}
+.mt-30{margin-top:30px!important;}
+.mt-70{margin-top:70px!important;}
+.mb-10{margin-bottom:10px!important;}
+.mb-20{margin-bottom:20px!important;}
+.mb-30{margin-bottom:30px!important;}
+.mb-40{margin-bottom:40px!important;}
+.ml-20{margin-left:20px!important;}
+.mr-5{margin-right:5px!important;}
+@media (max-width: 767.98px){
+h2{font-size:25px;line-height:34px;}
+}
+@media (max-width: 575.98px){
+.section-box.mt-70{margin-top:30px!important;}
+}
+@media (max-width: 484.98px){
+h2{font-size:20px;line-height:28px;}
+}
+/*! CSS Used keyframes */
+@-webkit-keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);}}
+@keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);}}

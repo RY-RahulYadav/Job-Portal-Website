@@ -1,0 +1,19 @@
+<section class="section-box-2">
+  
+    <div class="container">
+      <div class="banner-hero banner-image-single"><img src="/candiate.png" alt="jobbox"><a class="btn-editor" href="#"></a></div>
+      <div class="box-company-profile">
+        <div class="image-compay w-[5rem] h-[5rem] " style="border-radius: 1rem; background-color: rgb(222, 221, 221);"><img src="{{user?.imglogo}}" alt="error"></div>
+        <div class="row mt-10">
+          <div class="col-lg-8 col-md-12">
+            <h5 class="f-18">{{user?.name}} <span class="card-location font-regular ml-20">{{user?.state +" "+ user?.country}}</span></h5>
+            <p class="mt-0 font-md color-text-paragraph-2 mb-15">{{user?.usertitle}}</p>
+          </div>
+          <div class="col-lg-4 col-md-12 text-lg-end"><a class="btn  btn-apply btn-apply-big" (click)="user.usertype === 'applicant' ? handleResume() : handleViewPostedJob()" target="_blank">{{user.usertype=="applicant"?"View Resume":"View Posted Jobs"}}</a></div>
+        </div>
+      </div>
+      <div class="border-bottom pt-10 pb-10"></div>
+    </div>
+  </section>
+
+ 

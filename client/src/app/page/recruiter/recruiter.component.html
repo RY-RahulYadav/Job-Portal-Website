@@ -1,0 +1,11 @@
+@if(loading){
+<div>
+    <app-candidates-info-section1 [user]="userdata"></app-candidates-info-section1>
+    <app-recruiter-section [user] = "userdata" [urltitle]="urlname" [urlid] = "urlid" ></app-recruiter-section>
+    <app-section5 ></app-section5>
+</div>
+}@else {
+<div class="w-[100vw] flex justify-center item-center">
+    <div class="w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
+</div>
+}

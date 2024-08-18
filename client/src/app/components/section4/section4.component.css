@@ -1,0 +1,83 @@
+section{
+    background-color: #f4f7ff;
+    margin-bottom: 3rem;
+    margin-top: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 95vw;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    padding-top: 5rem;
+    
+}
+
+
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.title {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.open-posts {
+    font-size: 16px;
+}
+
+
+
+@media (max-width: 480px) {
+   
+    .icon {
+        font-size: 25px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .open-posts {
+        font-size: 12px;
+    }
+
+    
+}
+
+
+
+
+
+.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;}
+/*! end @import */
+div,span,h5,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+img{max-width:100%;}
+*:focus{outline:none!important;box-shadow:none!important;}
+::selection{background:#05264E;color:#fff;}
+::placeholder{color:#A0ABB8;opacity:1;}
+*:focus{outline:none!important;box-shadow:none;}
+.hover-up{transition:all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);}
+.hover-up:hover{transform:translateY(-3px);transition:all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);}
+*:hover{transition-duration:0.2s;}
+h5{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:700;font-size:20px;line-height:26px;color:#05264E;}
+.font-xs{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:400;}
+.font-xs{font-weight:500!important;font-size:12px!important;line-height:18px!important;}
+img,span{transition:all 0.3s ease 0s;}
+h5{color:#05264E;}
+.card-review-1{border:1px solid #E0E6F7;border-radius:10px;padding:0px 25px 25px 25px;position:relative;margin:45px 0px 0px 0px;}
+.card-review-1 .image-review{text-align:center;}
+.card-review-1 .image-review img{margin:-44px 0px 0px 0px;width:88px;height:88px;border-radius:50%;}
+.card-review-1 .review-name{text-align:center;border-bottom:1px solid #E0E6F7;padding-bottom:15px;padding-top:10px;margin-bottom:15px;}
+.card-review-1 .review-rating{margin-bottom:10px;}
+.card-review-1 .review-rating img{margin-right:5px;}

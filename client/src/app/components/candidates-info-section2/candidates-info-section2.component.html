@@ -1,0 +1,44 @@
+<section class="section-box mt-50">
+    <div class="container">
+      <div class="flex flex-wrap">
+          <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="box-nav-tabs nav-tavs-profile mb-5">
+              <p class="text-2xl font-bold ml-1 mb-20 ">Menu</p>
+              <hr class="mb-6">
+            <ul class="nav" role="tablist">
+              <li><a  class="btn btn-border aboutus-icon mb-20" (click)="handleRoute('profile')">My Profile</a></li>
+              <li><a class="btn btn-border aboutus-icon mb-20" (click)="handleRoute('edit')" >Edit Profile</a></li>
+              <li><a class="btn btn-border recruitment-icon mb-20"  (click)="handleRoute('applied')" >My Jobs</a></li>
+              <li><a class="btn btn-border people-icon mb-20 "  (click)="handleRoute('saved')">Saved Jobs</a></li>
+            </ul>
+            <div class="border-bottom pt-10 pb-10"></div>
+           
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8 col-sm-12 col-12 mb-50">
+          <div class="content-single">
+            <div class="tab-content">
+              @if(urltitle=='profile'){
+
+                  <app-candiate-profile-preview-section [user]="user"></app-candiate-profile-preview-section>
+              }@else if (urltitle=='applied') {
+
+                  <app-ci2-part2 [text] ="urltitle" [user]="user"></app-ci2-part2>
+              }  
+              @else if (urltitle=='edit') {
+                <app-ci2-part1 [user]="user"></app-ci2-part1>
+              }
+              @else{
+
+                  <app-ci2-part2 [text] ="urltitle" [user]="user"></app-ci2-part2>
+              }
+              
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

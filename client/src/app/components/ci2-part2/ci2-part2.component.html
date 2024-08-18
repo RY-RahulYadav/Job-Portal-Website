@@ -1,0 +1,91 @@
+<div class="tab-pane fade active show" id="tab-my-jobs" role="tabpanel" aria-labelledby="tab-my-jobs">
+  <!-- <h3 class="mt-0 color-brand-1">My Jobs</h3> -->
+  <h3 style="margin-bottom: 1rem;">{{text |titlecase}} Job</h3>
+  <hr class="mb-5">
+  @if (countJobs > 0) {
+    <div class="flex flex-wrap lg:w-[60vw]">
+      @for (item of visiblejobs; track $index) {
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-4">
+          <div class="card-grid-2 hover-up bg-white shadow-md rounded-lg p-4" style="margin-right: 2rem; height: 27rem;">
+            <div class="card-grid-2-image-left flex items-center">
+              <div class="image-box">
+                <img class="w-[5rem] h-[5rem] mt-0" src="https://static.vecteezy.com/system/resources/previews/008/878/596/non_2x/job-vacancy-concept-with-we-are-hiring-text-design-orange-and-white-color-job-vacancy-social-media-post-design-we-are-hiring-a-banner-design-with-an-orange-shade-free-png.png" alt="job image error">
+              </div>
+              <div class="right-info mt-15 ml-4">
+                <a class="name-job text-blue-500 hover:underline" href="/frontend/company-details">{{item?.jobcompany}}</a>
+                <div class="flex items-center mt-1">
+                  <img class="w-[0.8rem] h-[0.8rem] mr-2" src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="">
+                  {{item?.joblocation}}
+                </div>
+              </div>
+            </div>
+            <div class="card-block-info mt-4">
+              <h5 class="font-bold text-lg"><a href="#">{{item?.jobTitle}}</a></h5>
+              <div class="mt-3 flex items-center my-10" style="margin: 0.5rem 0" >
+                <span class="flex items-center mr-4">
+                  <img class="w-[1rem] h-[1rem] mr-10" src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="" style="margin-right: 0.5rem;">
+                  <p style="margin-right: 0.5rem;">{{item?.workmethod}}</p>
+                </span>
+                <span class="flex items-center" style="margin-right: 0.5rem;">
+                  <img class="w-[1rem] h-[1rem] mr-10" src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="" style="margin-right: 0.5rem;">
+                  <p>{{item?.experience}}</p>
+                </span>
+              </div>
+              <p class="font-sm color-text-paragraph mt-4">{{item.desc?.substring(0, 140)}}...</p>
+              <div class="mt-4" style="margin: 1rem 0;">
+                <a *ngFor="let skill of item.skills.split(',').slice(0, 3); let i=index"
+                  class="btn btn-grey-small mr-6 mt-2" style="margin-top: 10px; margin-right: 10px;">{{skill.substring(0, 10)}}..</a>
+              </div>
+              <div class="card-2-bottom mt-10">
+                <div class="flex justify-between items-center">
+                  <div class="text-lg font-semibold text-blue-900" style="font-weight: bold;">{{item?.salary}} <span class="text-muted text-sm">/year</span></div>
+                  <div>
+                    <div class="btn btn-apply-now bg-blue-500 text-white py-2 px-4 rounded" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm" (click)="handlebutton(item?._id)">View Details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="flex justify-center items-center lg:h-[40rem]">
+      <div class="text-2xl font-bold">No Jobs found</div>
+    </div>
+  }
+  
+  <div *ngIf="countJobs>0" class="paginations " style="text-align: center; margin-right: 3rem;">
+    <nav class="flex justify-center items-center gap-x-1" aria-label="Pagination">
+      <button (click)="previousPage()" type="button"
+        class="min-h-[38px] min-w-[50px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+        aria-label="Previous">
+        <svg class="shrink-0 size-5.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </button>
+      <div class="flex items-center gap-x-1">
+        <span
+          class="min-h-[38px] min-w-[40px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-white dark:focus:bg-white/10">{{currentPage}}</span>
+        <span
+          class="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500 "
+          style="margin-right:1rem;"> of </span>
+        <span
+          class="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500"
+          style="margin-right:1rem;"> {{pageNo}}</span>
+      </div>
+      <button (click)="nextPage()" type="button"
+        class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-3 text-sm rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10"
+        aria-label="Next">
+        <span class="sr-only">Next</span>
+        <svg class="shrink-0 size-5.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+      </button>
+    </nav>
+    
+  </div>
+</div>

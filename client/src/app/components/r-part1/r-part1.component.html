@@ -1,0 +1,57 @@
+<div>
+<form [formGroup]="recruiterForm" >
+    <div class="tab-pane fade show active" id="tab-my-profile" role="tabpanel" aria-labelledby="tab-my-profile">
+    <h3 class="mt-0 mb-15 color-brand-1">My Account</h3><a class="font-md color-text-paragraph-2" href="#">Update your
+        profile</a>
+    <div class="mt-35 mb-40 box-info-profie">
+        <div class="image-profile"><img
+                [src]="recruiterForm.get('imglogo')?.value" 
+                alt="error" ></div><a style="margin-top: 1rem;" class="btn btn-apply"> <input  (change)="onFileChange($event)" type="file" name="imglogo" id="imglogo" >Upload Avatar</a>
+    </div>
+    <div class="flex  flex-wrap form-contact   ">
+        <div class="col-lg-6 col-md-12 " style=" width: 30rem;">
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Full Name *</label>
+                <input class="form-control" type="text" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Email *</label>
+                <input class="form-control" type="text" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Contact number</label>
+                <input class="form-control" type="text" formControlName="phone">
+            </div>
+            
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Company Name</label>
+                <input class="form-control" type="text" formControlName="companyname">
+            </div>
+        
+
+        </div>
+        <div class="col-lg-6 col-md-12" style="margin-left: 10px; width: 30rem; ">
+            
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Company website</label>
+                <input class="form-control" type="url" formControlName="companyWebsite">
+            </div>
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Company Address </label>
+                <input class="form-control" type="text" formControlName="companyAddress">
+            </div>
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">State</label>
+                <input class="form-control" type="text" formControlName="state">
+            </div>
+            <div class="form-group">
+                <label class="font-sm color-text-mutted mb-10">Country</label>
+                <input class="form-control" type="text" formControlName="country">
+            </div>
+        </div>
+    </div>
+    <div class="box-button mt-15">
+        <button (click)="handlesubmit()" type="submit" class="btn btn-apply-big font-md font-bold">Save All Changes</button>
+    </div>
+</div>
+</form></div>

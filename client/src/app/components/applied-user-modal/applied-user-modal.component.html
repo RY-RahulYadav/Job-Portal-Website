@@ -1,0 +1,49 @@
+<div class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Application List</h2>
+            <span class="close" (click)="handleclose()">&times;</span>
+        </div>
+        <div class="modal-body">
+            @if(applicantcount>0){
+            <table>
+                <thead>
+                    <tr>
+                        <th class="serial-no">S.No</th>
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>Applied as</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Example row, duplicate for each entry -->
+                    
+                        @for (item of applicantData; let i =$index;track $index;) {
+                        <tr>
+                            <td class="serial-no">{{i+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.usertitle}}</td>
+                            <td>
+                                <button class="view-btn" (click)="handleview(item.resume)">View Resume</button>
+                                <!-- <button class="reject-btn">Reject</button> -->
+                            </td>
+                        </tr>
+                        }
+                    
+
+               
+                   
+
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        }
+            @else {
+                <div class="flex justify-center items-center text-xl font-bold"><div>No applicant applied on this Job</div></div>
+            }
+        </div>
+    </div>
+</div>

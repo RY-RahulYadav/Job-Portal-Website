@@ -1,0 +1,133 @@
+@media screen and (min-width:853px) {
+  .hidesmallmenu{
+display: none;
+visibility: hidden;
+  }
+
+}
+@media screen and (max-width:853px) {
+  .myhiddenbelow{
+      display: none;
+      visibility: hidden;
+  }
+
+}
+nav{
+  height: 6rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-btn {
+display: flex;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0.4rem;
+    background-color: rgb(253, 253, 253);
+    min-width: 280px;
+    /* box-shadow: 3px 3px 50px 10px rgba(255, 255, 255, 0.93); */
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+  
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    /* position: fixed; */
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+  
+  .side-menu {
+    position: fixed;
+    right: -550px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  }
+  
+  .side-menu.active {
+    right: 0;
+  }
+  
+  .side-menu .profile {
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+    margin-bottom: 2rem;
+  }
+  
+  .side-menu .profile img {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .side-menu .profile h4 {
+    margin-left: 1rem;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    margin: 1rem 0;
+  }
+  
+  .side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .side-menu ul li a:hover {
+    background-color: #575757;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  }
+  

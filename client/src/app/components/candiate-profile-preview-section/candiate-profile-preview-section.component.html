@@ -1,0 +1,133 @@
+<div class="bg-default-2 pt-5 pb-xxl-32">
+
+    <div class="container w-[100%]">
+        <div class="flex justify-content-center"></div>
+        <div class="  flex  " style="border-radius: 1rem;">
+            <div class="tab-content ">
+                <div class="nav border-bottom border-mercury pl-12 nav flex justify-between" role="tablist">
+                    <li class="tab-menu-items nav-item pr-12"><a href="#" role="tab" data-rb-event-key="one"
+                            id="left-tabs-example-tab-one" aria-controls="left-tabs-example-tabpane-one"
+                            aria-selected="true"
+                            class="text-uppercase font-size-3 font-weight-bold text-default-color py-3 px-0 nav-link active">Overview</a>
+                    </li>
+
+
+                </div>
+                <div id="left-tabs-example-tabpane-one" aria-labelledby="left-tabs-example-tab-one" role="tabpanel"
+                    aria-hidden="false" class="fade tab-pane active show">
+                    <div class="pr-xl-0 pr-xxl-14 p-5 px-xs-12 pt-7 pb-5">
+                        <h4 class="font-size-6 mb-7 mt-5 text-black-2 font-weight-semibold">About</h4>
+                        @if(user?.desc){
+                            <p>{{user?.desc}}</p>
+
+                        }@else {
+                            <div class="flex  justify-center item-center p-5 ">
+                                <div class="text-2xl mt-10" >No Information </div>
+                            </div>
+                            }
+                    </div>
+                    <div class="border-top pr-xl-0 pr-xxl-14 p-5 pl-xs-12 pt-7 pb-5">
+                        <h4 class="font-size-6 mb-7 mt-5 text-black-2 font-weight-semibold">Contant Info</h4>
+                        <ul class="list-unstyled d-flex align-items-center flex-wrap">
+                            <li><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center">Phone
+                                    No : {{user?.phone}}</a></li>
+                            <li><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center">Email
+                                    : {{user?.email}}</a></li>
+                            <li><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center">Github
+                                    Link : {{user?.email}}</a></li>
+                            <li><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center">linkedin
+                                    link :{{user?.linkdin}} </a></li>
+                            <li><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center">Portfolio
+                                    Website : {{user?.portfolio}}</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="border-top pr-xl-0 pr-xxl-14 p-5 pl-xs-12 pt-7 pb-5">
+                        <h4 class="font-size-6 mb-7 mt-5 text-black-2 font-weight-semibold">Skills</h4>
+                        @if (user?.skills?.length>0) {
+                        <ul class="list-unstyled d-flex align-items-center flex-wrap">
+                             
+                            <li *ngFor="let skill of user?.skills; let i=index"><a
+                                    class="bg-polar text-black-2  mr-6 px-7 mt-2 mb-2 font-size-3 rounded-3 min-height-32 d-flex align-items-center"
+                                    >{{skill}}</a></li>
+
+                        </ul>}@else {
+                            <div class="flex  justify-center item-center p-5 ">
+                                <div class="text-2xl mt-10" >No Information </div>
+                            </div>
+                            }
+                    </div>
+                    <div class="border-top p-5 pl-xs-12 pt-7 pb-5">
+                        <h4 class="font-size-6 mb-7 mt-5 text-black-2 font-weight-semibold">Work Exprerience
+                        </h4>
+                        @if (user.experienceArray?.length>0) {
+                        <div *ngFor="let item of user.experienceArray" class="w-100">
+                            <div class="d-flex align-items-center pr-11 mb-9 flex-wrap flex-sm-nowrap">
+                                <div class="square-72 d-block mr-8 mb-7 mb-sm-0"><img
+                                        src="https://cdn-icons-png.flaticon.com/512/5650/5650106.png" alt=""></div>
+                                <div class="w-100 mt-n2">
+                                    <h3 class="mb-0"><a class="font-size-6 text-black-2 font-weight-semibold"
+                                            >{{item.title}}</a></h3><a
+                                        class="font-size-4 text-default-color line-height-2"
+                                       >{{item?.jobcompany}}</a>
+                                    <div class="d-flex align-items-center justify-content-md-between flex-wrap">
+                                        <a class="font-size-4 text-gray mr-5" >{{item.start}} - {{item.end}}
+                                        </a><a class="font-size-3 text-gray" ><span
+                                                class="candidate-profile___StyledSpan-sc-501vm-0 fmGypD mr-4"><img
+                                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDEyIDE1Ij48Zz48Zz48cGF0aCBmaWxsPSIjODI4MjgyIiBkPSJNNiA5YTIuNjY3IDIuNjY3IDAgMSAxIDAtNS4zMzRBMi42NjcgMi42NjcgMCAwIDEgNiA5em0wLTEuMzM0QTEuMzMzIDEuMzMzIDAgMSAwIDYgNWExLjMzMyAxLjMzMyAwIDAgMCAwIDIuNjY2em0wIDcuMTUybC00LjI0My00LjI0MmE2IDYgMCAxIDEgOC40ODYgMHptMC0xLjg4NWwzLjMtMy4zYTQuNjY3IDQuNjY3IDAgMSAwLTYuNiAweiIvPjwvZz48L2c+PC9zdmc+"
+                                                    alt=""></span>{{item.loc}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>}
+                        @else {
+                            <div class="flex  justify-center item-center p-5 ">
+                                <div class="text-2xl mt-10" >No Information </div>
+                            </div>
+                            }
+
+                    </div>
+                    <div class="border-top p-5 pl-xs-12 pt-7 pb-5">
+                        <h4 class="font-size-6 mb-7 mt-5 text-black-2 font-weight-semibold">Education</h4>
+                        @if( user.education?.length>0){
+                        <div *ngFor="let item of user.education; let i = index;" class="w-100">
+
+                            <div class="d-flex align-items-center pr-11 mb-9 flex-wrap flex-sm-nowrap">
+                                <div class="square-72 d-block mr-8 mb-7 mb-sm-0"><img
+                                        src="https://png.pngtree.com/png-vector/20221012/ourmid/pngtree-school-and-college-logo-vector-png-image_6310188.png"
+                                        alt=""></div>
+                                <div class="w-100 mt-n2">
+                                    <h3 class="mb-0"><a class="font-size-6 text-black-2">{{item.degree}}</a></h3><a
+                                        class="font-size-4 text-default-color line-height-2"
+                                       >{{item.college}}</a>
+                                    <div class="d-flex align-items-center justify-content-md-between flex-wrap">
+                                        <a class="font-size-3 text-gray mr-5">{{item.start}} - {{item.end}}
+                                        </a><a class="font-size-3 text-gray"><span
+                                                class="candidate-profile___StyledSpan3-sc-501vm-2 gyPAwt mr-4"><img
+                                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDEyIDE1Ij48Zz48Zz48cGF0aCBmaWxsPSIjODI4MjgyIiBkPSJNNiA5YTIuNjY3IDIuNjY3IDAgMSAxIDAtNS4zMzRBMi42NjcgMi42NjcgMCAwIDEgNiA5em0wLTEuMzM0QTEuMzMzIDEuMzMzIDAgMSAwIDYgNWExLjMzMyAxLjMzMyAwIDAgMCAwIDIuNjY2em0wIDcuMTUybC00LjI0My00LjI0MmE2IDYgMCAxIDEgOC40ODYgMHptMC0xLjg4NWwzLjMtMy4zYTQuNjY3IDQuNjY3IDAgMSAwLTYuNiAweiIvPjwvZz48L2c+PC9zdmc+"
+                                                    alt=""></span>{{item.loc}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>}
+                        @else {
+                        <div class="flex  justify-center item-center p-5 ">
+                            <div class="text-2xl mt-10" >No Information </div>
+                        </div>
+                        }
+                        
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<section class="section-box mt-50">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title mb-10 wow animate__ animate__fadeInUp animated"
+        style="visibility: visible; animation-name: fadeInUp;">Jobs of the day</h2>
+      <p class="font-lg color-text-paragraph-2 wow animate__ animate__fadeInUp animated"
+        style="visibility: visible; animation-name: fadeInUp;">Search and connect with the right candidates faster. </p>
+      <div class="list-tabs mt-40">
+        <ul class="nav nav-tabs" role="tablist">
+          <li *ngFor="let item of categorydata.slice(0,10)"  >
+            <a class="active flex " style="display: flex;" (click)="handleSearch(item.category)" >
+              <p class="mr-5" style="font-size: 1.2rem;">{{item.icon}} </p>
+              <p>{{item.category}}</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="mt-70">
+      <div class="" id="myTabContent-1">
+        <div class="" id="tab-job-1" role="tabpanel" aria-labelledby="tab-job-1">
+          
+          @if (countJobs>0) {
+            <div class="flex flex-wrap">
+              @for (item of alljobs.slice(0,9); track $index) {
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                <div class="card-grid-2 hover-up " style="margin-right: 2rem; height: 26rem;" >
+                  <div class="card-grid-2-image-left"><span class="flash"></span>
+                    <div class="image-box"><img class="w-[5rem] h-[5rem] mt-0"
+                        src="https://static.vecteezy.com/system/resources/previews/008/878/596/non_2x/job-vacancy-concept-with-we-are-hiring-text-design-orange-and-white-color-job-vacancy-social-media-post-design-we-are-hiring-a-banner-design-with-an-orange-shade-free-png.png"
+                        alt="job image error"></div>
+                    <div class="right-info mt-15"><a class="name-job"
+                        href="/frontend/company-details">{{item?.jobcompany}}</a>
+                      <div class=" flex  items-center">
+                        <img class="w-[0.8rem] h-[0.8rem] mr-4" style="margin-right: 0.4rem;" src="https://cdn-icons-png.flaticon.com/512/535/535239.png"
+                          alt="">
+                        {{item?.joblocation}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block-info">
+                    <h6><a href="/frontend/job-details"> {{item?.jobTitle}} </a></h6>
+                    <div class="mt-5 flex  items-center">
+                      
+                      <span class=" flex items-center mr-10" style="margin-right: 1.4rem;">
+                        <img style="margin-right: 0.3rem;" class="w-[0.8rem] h-[0.8rem] mr-4" src="https://static-00.iconduck.com/assets.00/clock-icon-512x512-i91r41ub.png"alt="">
+                        <p  >{{item?.workmethod}}</p>
+                      </span>
+                      <span class=" flex items-center" style="margin-right: 1.4rem;" >
+                        <img style="margin-right: 0.3rem;" class="w-[1rem] h-[1rem] mr-4" src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png"alt="">
+                        <p>{{item?.experience}}</p>
+  
+                      </span>
+                    </div>
+                    <p class="font-sm color-text-paragraph mt-15">{{item.desc?.substring(0, 150)}}...</p>
+                    <div class="mt-30">
+                      <a *ngFor="let skill of item.skills.split(',').slice(0,3); let i=index"
+                        class="btn btn-grey-small mr-5" style="margin-top: 10px;">{{skill}}</a>
+  
+                    </div>
+                    <div class="card-2-bottom mt-30">
+                      <div class="flex">
+                        <div class="col-lg-7 col-7"><span class="card-text-price" style="font-size: 1rem;">{{item?.salary}}</span><span
+                            class="text-muted">/year</span></div>
+                        <div class="col-lg-5 col-5 text-end">
+                          <div class="btn btn-apply-now" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm" (click)="handlebutton(item?._id)">View Details
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>}
+            </div>}
+            @else {
+            <div class="flex justify-center items-center lg:h-[40rem]">
+  
+              <div class="" style="font-size: 2.5rem; font-weight: bold;">No Jobs found </div>
+            </div>
+            }
+          
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

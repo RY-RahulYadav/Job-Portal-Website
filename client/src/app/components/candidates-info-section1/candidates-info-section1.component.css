@@ -1,0 +1,96 @@
+
+a{background-color:transparent;}
+img{border-style:none;}
+/*! end @import */
+/*! @import https://jobbox-html.netlify.app/frontend/assets/css/vendors/bootstrap.min.css */
+*,::after,::before{box-sizing:border-box;}
+h5{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;}
+h5{font-size:1.25rem;}
+p{margin-top:0;margin-bottom:1rem;}
+a{color:#0d6efd;text-decoration:underline;}
+a:hover{color:#0a58ca;}
+img{vertical-align:middle;}
+.container{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto;}
+@media (min-width:576px){
+.container{max-width:540px;}
+}
+@media (min-width:768px){
+.container{max-width:720px;}
+}
+@media (min-width:992px){
+.container{max-width:960px;}
+}
+@media (min-width:1200px){
+.container{max-width:1140px;}
+}
+@media (min-width:1400px){
+.container{max-width:1320px;}
+}
+.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x)/ -2);margin-left:calc(var(--bs-gutter-x)/ -2);}
+.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)/ 2);padding-left:calc(var(--bs-gutter-x)/ 2);margin-top:var(--bs-gutter-y);}
+@media (min-width:768px){
+.col-md-12{flex:0 0 auto;width:100%;}
+}
+@media (min-width:992px){
+.col-lg-4{flex:0 0 auto;width:33.3333333333%;}
+.col-lg-8{flex:0 0 auto;width:66.6666666667%;}
+}
+.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+@media (prefers-reduced-motion:reduce){
+.btn{transition:none;}
+}
+.btn:hover{color:#212529;}
+.btn:focus{outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25);}
+.btn:disabled{pointer-events:none;opacity:.65;}
+.border-bottom{border-bottom:1px solid #dee2e6!important;}
+.mt-0{margin-top:0!important;}
+@media (min-width:992px){
+.text-lg-end{text-align:right!important;}
+}
+/*! end @import */
+div,span,h5,p,a,img,section{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+section{display:block;}
+img{max-width:100%;}
+*:focus{outline:none!important;box-shadow:none!important;}
+a{color:#05264E;}
+a:hover{color:#3C65F5;}
+p{color:#4F5E64;}
+::selection{background:#05264E;color:#fff;}
+::placeholder{color:#A0ABB8;opacity:1;}
+*:focus{outline:none!important;box-shadow:none;}
+@media (min-width: 1400px){
+.container{max-width:1350px;}
+}
+a{text-decoration:none;}
+*:hover{transition-duration:0.2s;}
+h5{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:700;font-size:20px;line-height:26px;color:#05264E;}
+.font-md{font-family:"Plus Jakarta Sans", sans-serif;font-style:normal;font-weight:400;}
+.font-md{font-size:16px!important;line-height:24px!important;}
+.font-regular{font-weight:400;}
+.color-text-paragraph-2{color:#66789C;}
+.f-18{font-size:18px;}
+a,img,span{transition:all 0.3s ease 0s;}
+h5{color:#05264E;}
+.btn{font-family:"Plus Jakarta Sans", sans-serif;border-radius:8px;padding:13px 25px;font-size:14px;line-height:1;transition:0.2s;}
+.btn-apply{background-color:#3C65F5;color:#ffffff;padding:12px 20px;border-radius:4px;}
+.btn-apply:hover{background-color:#05264E;color:#ffffff;}
+.btn-apply-big{background-color:#3C65F5;color:#ffffff;padding:18px 35px;border-radius:4px;}
+.btn-apply-big:hover{color:#fff;background-color:#05264E;}
+.btn-preview-icon{background-image:url(https://jobbox-html.netlify.app/frontend/assets/imgs/page/candidates/preview.svg);background-position:35px 14px;background-repeat:no-repeat;padding:14px 30px 14px 55px;font-size:16px;line-height:24px;font-weight:700;min-width:180px;}
+.card-location{font-size:12px;color:#A0ABB8;display:inline-block;padding:0px 0px 0px 20px;background:url(https://jobbox-html.netlify.app/frontend/assets/imgs/template/icons/location.svg) no-repeat 0px 6px;line-height:24px;}
+.banner-hero{padding:0px 65px 0px 15px;position:relative;max-width:1770px;margin:0 auto;}
+.banner-hero.banner-image-single{padding:20px 0px 20px 0px;}
+.banner-hero.banner-image-single img{width:100%;border-radius:16px;}
+.pt-10{padding-top:10px!important;}
+.pb-10{padding-bottom:10px!important;}
+.mt-10{margin-top:10px!important;}
+.mb-15{margin-bottom:15px!important;}
+.ml-20{margin-left:20px!important;}
+.btn-editor{background-image:url(https://jobbox-html.netlify.app/frontend/assets/imgs/page/candidates/editor.svg);background-position:center;background-repeat:no-repeat;background-color:#3C65F5;position:absolute;bottom:45px;right:20px;height:35px;width:35px;border-radius:50%;}
+.btn-editor:hover{background-color:#05264E;}
+.box-company-profile{max-width:90%;display:table;table-layout:fixed;margin:auto;width:100%;padding:20px 0px 0px 0px;position:relative;}
+.image-compay{position:absolute;top:-80px;left:0px;}
+.image-compay img{width:100%;border-radius:16px;}
+@media (max-width: 991.98px){
+.banner-hero{max-width:100%;padding:0;}
+}
