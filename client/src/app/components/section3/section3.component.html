@@ -7,7 +7,7 @@
         style="visibility: visible; animation-name: fadeInUp;">Search and connect with the right candidates faster. </p>
       <div class="list-tabs mt-40">
         <ul class="nav nav-tabs" role="tablist">
-          <li *ngFor="let item of categorydata.slice(0,10)"  >
+          <li *ngFor="let item of categorydata.slice(0,10)" style="cursor: pointer;" >
             <a class="active flex " style="display: flex;" (click)="handleSearch(item.category)" >
               <p class="mr-5" style="font-size: 1.2rem;">{{item.icon}} </p>
               <p>{{item.category}}</p>
