@@ -3,9 +3,9 @@
   <h3 style="margin-bottom: 1rem;">{{text |titlecase}} Job</h3>
   <hr class="mb-5">
   @if (countJobs > 0) {
-    <div class="flex flex-wrap lg:w-[60vw]">
+    <div class="flex flex-wrap lg:w-[67vw]">
       @for (item of visiblejobs; track $index) {
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-4">
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-4 ">
           <div class="card-grid-2 hover-up bg-white shadow-md rounded-lg p-4" style="margin-right: 2rem; height: 27rem;">
             <div class="card-grid-2-image-left flex items-center">
               <div class="image-box">
@@ -31,13 +31,13 @@
                   <p>{{item?.experience}}</p>
                 </span>
               </div>
-              <p class="font-sm color-text-paragraph mt-4">{{item.desc?.substring(0, 140)}}...</p>
+              <p class="font-sm color-text-paragraph mt-4">{{item.desc?.substring(0, 100)}}...</p>
               <div class="mt-4" style="margin: 1rem 0;">
                 <a *ngFor="let skill of item.skills.split(',').slice(0, 3); let i=index"
-                  class="btn btn-grey-small mr-6 mt-2" style="margin-top: 10px; margin-right: 10px;">{{skill.substring(0, 10)}}..</a>
+                  class="btn btn-grey-small mr-6 mt-2" style="margin-top: 10px; margin-right: 10px;">{{skill.substring(0, 8)}}..</a>
               </div>
-              <div class="card-2-bottom mt-10">
-                <div class="flex justify-between items-center">
+              <div class="card-2-bottom ">
+                <div class="flex justify-between items-center" style="margin-top: 2rem;">
                   <div class="text-lg font-semibold text-blue-900" style="font-weight: bold;">{{item?.salary}} <span class="text-muted text-sm">/year</span></div>
                   <div>
                     <div class="btn btn-apply-now bg-blue-500 text-white py-2 px-4 rounded" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm" (click)="handlebutton(item?._id)">View Details</div>
