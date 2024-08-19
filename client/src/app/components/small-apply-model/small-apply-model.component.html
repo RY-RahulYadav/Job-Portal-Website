@@ -8,7 +8,7 @@
         <span>Email:</span> <span>{{user?.email}}</span>
     </div>
     <div class="profile-item">
-        <span>GitHub:</span> <a href="https://github.com/johndoe" target="_blank">{{user?.github}}</a>
+        <span>GitHub:</span> <a [href]="user?.github" target="_blank">{{user?.github}}</a>
     </div>
     <div class="resume-box" >
        <a (click)="viewResume(user?.resume)" >Click to view resume</a> 

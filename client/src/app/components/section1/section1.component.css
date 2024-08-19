@@ -558,15 +558,15 @@ option {
 }
 
 .banner-hero .block-banner .form-find .input-keysearch {
-    background: url('/text.svg') no-repeat left 10px center;
+    background: url('../../../assets/text.svg') no-repeat left 10px center;
 }
 
 .banner-hero .block-banner .form-find .input-industry {
-    background: url('/title.svg') no-repeat left 18px center;
+    background: url('../../../assets/title.svg') no-repeat left 18px center;
 }
 
 .banner-hero .block-banner .form-find .input-location {
-    background: url('/loc.svg') no-repeat left 18px center;
+    background: url('../../../assets/loc.svg') no-repeat left 18px center;
 }
 .banner-hero .block-banner .list-tags-banner {
     position: relative;
@@ -592,7 +592,7 @@ option {
     width: 100%;
     padding: 100px 0 80px;
     max-width: 100%;
-    background: url("/bg.png") no-repeat top;
+    background: url("../../../assets/bg.png") no-repeat top;
     background-size: cover;
 }
 
