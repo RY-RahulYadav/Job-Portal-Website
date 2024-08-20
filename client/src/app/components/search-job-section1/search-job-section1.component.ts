@@ -110,7 +110,7 @@ export class SearchJobSection1Component {
         // console.log(this.alljobs);
         this.pageNo= Math.ceil(this.countJobs/15)
         // console.log(this.pageNo);
-        
+        this.currentPage =1;
         this.visiblepages();
         
       },
