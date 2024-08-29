@@ -123,14 +123,18 @@
                     <div class="form-contact">
                         <div class="form-group">
                             <input class="form-control search-icon" type="text" placeholder="E.g. Angular, Laravel..."
-                                [formControl]="skillInput" (keydown.enter)="addskills()">
+                                [formControl]="skillInput" >
+                                <i (click)="addskills()" class="fa-solid fa-plus-circle" style="position: relative; right: -24rem;  top: -2.5rem; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            
                         </div>
                     </div>
                     <div class="box-tags mt-30">
                         <a *ngFor="let skill of UserEditForm.get('skills')?.value; let i = index"
                             class="btn btn-grey-small mr-10">
                             {{skill }}
-                            <i class="fa-solid fa-xmark ml-4" (click)="removeskills(i)"></i>
+                            <i class="fa-solid fa-xmark ml-4"  (click)="removeskills(i)"></i>
                             
                         </a>
                     </div>

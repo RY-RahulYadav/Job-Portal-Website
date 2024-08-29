@@ -66,6 +66,7 @@ export class HeaderComponent implements OnInit {
       this.userStatus.updateauthstatus(false)
       this.userStatus.updateUser(null)
       alert('succesfully logout')
+      this.cokkieService.deleteAll()
       this.router.navigate(['/'])
       
     }

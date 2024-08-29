@@ -200,9 +200,9 @@ export class Ci2Part1Component implements OnInit, OnDestroy {
 
       },
       error: (error) => {
-        console.log(error);
+        console.log(error.error.message);
 
-        alert(error)
+        alert(error.error.message)
       }
     })
 

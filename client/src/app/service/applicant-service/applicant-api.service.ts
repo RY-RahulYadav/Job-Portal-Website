@@ -13,7 +13,7 @@ export class ApplicantApiService {
   ) { }
 
   updateApplicant(uid:string , data:any) {
-    const api = `${this.apiUrl}api/applicant/update-applicant`
+    const api = `${this.apiUrl}/api/applicant/update-applicant`
     const token = uid
     const header = new HttpHeaders({
       'Content-Type': 'application/json',
