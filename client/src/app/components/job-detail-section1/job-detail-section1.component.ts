@@ -97,7 +97,11 @@ export class JobDetailSection1Component {
     this.applicantModel = event
   }
   handleSmallModel() {
-    this.smallApplyModel = true;
+    if(this.cokkieService.get('uid')){
+    this.smallApplyModel = true;}
+    else{
+      alert('login first')
+    }
   }
   handlesmallmodel(event: boolean) {
     this.smallApplyModel = event;
